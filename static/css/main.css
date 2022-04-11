@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Inconsolata:wght@500&family=Public+Sans:wght@300&family=Lexend:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    color: #fff;
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(32, 178, 245);
+    position: fixed;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav-links li {
+    cursor: pointer;
+    display: inline-block;
+    list-style: none;
+    margin: 0 35px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.nav-menu div {
+    width: 32px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+@media screen and (max-width:860px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav {
+        background-color: rgba(32, 178, 245);
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .nav-menu {
+        width: 100px;
+        cursor: pointer;
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        height: 92vh;
+        background-color: rgba(32, 178, 245);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.nav-btn {
+    width: 140px;
+    color: white;
+    background: rgba(46, 96, 233, 0.459);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.288);
+}
+
+
+/* Home CSS */
+
+.Home {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/home.jpg');
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.Home button {
+    margin: 20px;
+    width: 200px;
+    height: 51px;
+    background-color: rgba(32, 178, 245, 0.63);
+    box-shadow: none;
+}
+
+.Home h1 {
+    text-align: center;
+    width: 80%;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.Home span,
+h1 {
+    font-family: 'Public Sans', sans-serif;
+}
+
+@media screen and (max-width:500px) {
+    .Home h1 {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* About CSS */
+
+.About {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/about.jpg');
+    min-height: 110vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 140px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.About-header {
+    text-align: left;
+    padding: 5px 20px 20px 20px;
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+}
+
+.About-Content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    width: 90%;
+    padding: 5px 20px 20px 20px;
+}
+
+.About-Content div p {
+    line-height: 46px;
+    font-size: 1.3rem;
+    word-spacing: 2px;
+}
+
+.larger {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.About-Content>div {
+    padding: 20px;
+    min-width: 210px;
+    max-width: 500px;
+    min-height: 30vh;
+}
+
+.cardDiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cardDiv>div {
+    background-color: rgba(32, 178, 245, 0.63);
+    width: 200px;
+    border-radius: 12px;
+    height: 150px;
+}
+
+.cardDiv>div:nth-child(2n) {
+    margin-top: 52px;
+}
+
+.card {
+    font-weight: 600;
+    padding: 12px 8px;
+}
+
+.card p {
+    margin-bottom: 25px;
+}
+
+.card-content {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.About-btn {
+    width: 200px;
+    color: white;
+    background: rgb(32, 131, 245);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    height: 60px;
+    letter-spacing: 2px;
+    word-spacing: 7px;
+}
+
+@media screen and (max-width:1150px) {
+    .About-Content>div {
+        width: 100%;
+    }
+    .About-Content {
+        flex-direction: column;
+    }
+    .About-btn {
+        margin-bottom: 22px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .About-Content>div {
+        padding: 0;
+    }
+    .cardDiv>div {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .cardDiv>div:nth-child(2n) {
+        margin-top: 20px;
+    }
+}
+
+
+/* Work CSS */
+
+.Work-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/contact3.jpg');
+    min-height: 110vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Lexend', sans-serif;
+    padding-top: 100px;
+}
+
+.Work-bg>div {
+    min-height: 330px;
+    width: 220px;
+    background-color: #20b2f5a6;
+    border-radius: 10px;
+    padding: 35px 25px 36px 25px;
+    margin: 20px 50px;
+    color: white;
+}
+
+.Work-bg>div:hover {
+    background-color: #20b2f5;
+}
+
+.Work-btn {
+    margin-top: 25px;
+    top: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    z-index: 1;
+}
+
+@media screen and (max-width:720px) {
+    .Work-bg>div {
+        margin: 20px 10px;
+    }
+}
+
+
+/* Read Blog */
+
+.ReadBlog {
+    font-family: 'Lexend', sans-serif;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/contact3.jpg');
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.ReadBlogContent {
+    text-align: left;
+    width: 85%;
+    min-height: 80vh;
+    background-color: #20b2f5ad;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 40px auto;
+}
+
+.Blog-Area {
+    width: 100%;
+}
+
+.ReadBlogContent h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.read-img {
+    height: 50vh;
+    width: 100%;
+    object-fit: contain;
+    margin: 20px auto;
+}
+
+.read-content {
+    line-height: 43px;
+    margin: 25px auto;
+    font-size: 1.3rem;
+}
+
+.ReadBlogContent p {
+    font-size: 1.3rem;
+    font-family: 'Inconsolata', monospace;
+}
+
+@media screen and (max-width:500px) {
+    .ReadBlogContent {
+        width: 95%;
+    }
+    .Footer div {
+        margin: 10px auto;
+    }
+}
+
+
+/* Write Blog */
+
+.writeBlog {
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/contact2.jpg');
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.writeBlog-form {
+    width: 100%;
+}
+
+.writeBlog-form input,
+textarea {
+    margin: 18px;
+    width: 80%;
+    border: none;
+    outline: none;
+    min-height: 6vh;
+    padding: 10px;
+    border-radius: 10px;
+    color: #4b5b6d;
+    font-weight: 400;
+}
+
+.Sign-btn {
+    width: 200px;
+    height: 45px;
+    border: none;
+    background-color: rgb(48, 97, 231);
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+
+/* Footer CSS */
+
+.Footer-Area {
+    background-color: #20b2f5;
+    min-height: 20vh;
+    padding: 20px 0;
+}
+
+.Footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+    padding: 20px 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.Footer div {
+    width: 250px;
+    margin: 10px auto;
+}
+
+.Footer-li li {
+    list-style: none;
+    margin: 3px;
+}
+
+.Footer-icons {
+    color: white;
+    margin: 6px;
+    font-size: 20px;
+}
+
+.Footer-icons:hover {
+    animation: jump 0.7s ease-in-out;
+}
+
+@keyframes jump {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.Social-Footer-li li {
+    list-style: none;
+    margin: 3px;
+    display: inline-block;
+}
+
+.Footer-hr {
+    padding: 12px 0;
+    width: 85%;
+    font-family: 'Quicksand', sans-serif;
+    margin: auto;
+}

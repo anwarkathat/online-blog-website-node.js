@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blogs</title>
+    <%- include('./components/head'); %>
+</head>
+
+<body>
+    <div>
+        <!-- NavBar  -->
+        <%- include('./components/nav'); %>
+
+    </div>
+    <div class="Work-bg">
+        <% data.forEach(function(blogData){ %>
+            <div> <img src=<%=blogData.BlogImage %> height="200px" width="100%" style="border-radius: 10px; object-fit: cover;" alt="Blogart" />
+                <h3 style="margin-top: 22px;text-align: center;">
+                    <%=blogData.BlogTitle %>
+                </h3>
+                <a href="/blogs/<%=blogData._id %>"><button class="Work-btn">Read</button></a>
+            </div>
+            <% }) %>
+    </div>
+    <div>
+        <!-- footer -->
+        <%- include('./components/footer'); %>
+    </div>
+</body>
+
+
+</html>

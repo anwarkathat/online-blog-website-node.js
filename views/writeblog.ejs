@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Write Blog</title>
+    <%- include('./components/head'); %>
+</head>
+
+<body>
+    <div>
+        <!-- NavBar  -->
+        <%- include('./components/nav'); %>
+
+    </div>
+    <div class="writeBlog">
+        <form action="/writeblog/publish" method="post" class="writeBlog-form">
+            <h2>Title </h2>
+            <input type="text" name="BlogTitle" placeholder="Blog Title" required />
+            <h2>Image Link</h2>
+            <input type="text" name="BlogImage" placeholder="Enter Public Image Link (if any)" />
+            <h2>Blog Content</h2>
+            <textarea name="BlogContent" placeholder="Write Content" cols="30" rows="10" required></textarea>
+            <h2>Publisher Name</h2>
+            <input type="text" name="PublishName" placeholder="Enter Name" />
+            <br />
+            <button class="Sign-btn">Save</button>
+        </form>
+    </div>
+    <div>
+        <!-- footer -->
+        <%- include('./components/footer'); %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Read Blog</title>
+    <%- include('./components/head'); %>
+</head>
+
+<body>
+    <div>
+        <!-- NavBar  -->
+        <%- include('./components/nav'); %>
+
+    </div>
+    <!-- Read blog -->
+    <div class="ReadBlog">
+        <div class="ReadBlogContent">
+            <h1>
+                <%= BlogData.BlogTitle %>
+            </h1>
+            <img class="read-img" alt="BlogImage" src=<%=BlogData.BlogImage %> />
+            <div class="read-content">
+                <%=BlogData.BlogContent %>
+            </div>
+            <p>
+                Published By :
+                <%=BlogData.PublishName %>
+            </p>
+        </div>
+    </div>
+    <div>
+        <!-- footer -->
+        <%- include('./components/footer'); %>
+    </div>
+</body>
+
+</html>
